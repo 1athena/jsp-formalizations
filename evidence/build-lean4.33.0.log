@@ -1,0 +1,8 @@
+remote.lean:182:38: warning: Try `simp at hk` instead of `simpa using hk`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+remote.lean:197:38: warning: Try `simp at hk` instead of `simpa using hk`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'JSP000301.consecutive_powerful_neither_square' depends on axioms: [propext]
+'JSP000301.original_claim_is_false' depends on axioms: [propext]

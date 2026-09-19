@@ -1,0 +1,15 @@
+JSP-000301 verification environment
+===================================
+Machine: macOS arm64 (Apple Silicon), darwin
+Checker 1: Lean 4.33.0 (arm64-apple-darwin20.0.0, Release)
+           path: /Users/liulili/suibian/jsp/lean/conda/bin/lean
+           source: conda-forge lean4 4.33.0
+Checker 2: Lean 4.35.0-rc2 (arm64-apple-darwin24.6.0, Release, commit 11acb17ec6b07a8f9e9173e6845197929540936b)
+           path: /Users/liulili/suibian/jsp/lean/lean435/bin/lean
+Proof source: this repository, commit 2aaf4b4e617c3f43eec6303c8592e1398a03c3d3
+Source SHA-256 (JSP000301.lean): 92c1413bde4de0aea80d5ca906f67fa9ae40e047385f28732883047b899f24be
+Command: lean JSP000301.lean   (network not used; no mathlib; pure Lean core + Std)
+Result (both checkers): exit 0
+#print axioms consecutive_powerful_neither_square -> [propext]
+#print axioms original_claim_is_false            -> [propext]
+No sorry, no sorryAx, no custom axioms.
