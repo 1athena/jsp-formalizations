@@ -1,0 +1,47 @@
+# Clean-checkout reproduction evidence — JSP-000301
+
+Generated: 2026-09-19T15:04:58+0800 (local, GMT+8)
+
+This log proves the Lean formalization referenced by upstream PR
+TheJustinSunPrize/awards#844 reproduces from a *clean checkout* of the
+pinned commit, using only the declared toolchain and no dependencies.
+
+## Environment
+
+```
+OS: macOS darwin (arm64)
+Lean: Lean (version 4.33.0, arm64-apple-darwin20.0.0, Release)
+Toolchain file (at pinned commit): leanprover/lean4:v4.33.0
+Dependencies: none (no lakefile / no Mathlib)
+```
+
+## Commands (verbatim)
+
+```sh
+git clone https://github.com/1athena/jsp-formalizations.git
+cd jsp-formalizations
+git checkout 2aaf4b4e617c3f43eec6303c8592e1398a03c3d3
+lean JSP000301.lean
+```
+
+## Result
+
+```
+exit code: 0
+
+| JSP000301.lean:182:38: warning: Try `simp at hk` instead of `simpa using hk`
+| 
+| Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+| JSP000301.lean:197:38: warning: Try `simp at hk` instead of `simpa using hk`
+| 
+| Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+| 'JSP000301.consecutive_powerful_neither_square' depends on axioms: [propext]
+| 'JSP000301.original_claim_is_false' depends on axioms: [propext]
+```
+
+## Axiom audit
+
+Both exported theorems depend only on `[propext]`, which is part of Lean's
+standard kernel for propositional extensionality (not a custom axiom).
+A `grep` for `sorry` / `admit` in the pinned file returns only one comment line
+(line 27, part of the trust statement); there are no proof holes.
