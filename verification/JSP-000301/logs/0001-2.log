@@ -1,0 +1,112 @@
+JSP000301.consecutive_powerful_neither_square : @Exists.{1} Nat fun (n : Nat) =>
+  And (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n)
+    (And (JSP000301.Powerful n)
+      (And
+        (JSP000301.Powerful
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (And (Not (JSP000301.IsSquare n))
+          (Not
+            (JSP000301.IsSquare
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))))))
+theorem JSP000301.consecutive_powerful_neither_square : @Exists.{1} Nat fun (n : Nat) =>
+  And (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n)
+    (And (JSP000301.Powerful n)
+      (And
+        (JSP000301.Powerful
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (And (Not (JSP000301.IsSquare n))
+          (Not
+            (JSP000301.IsSquare
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))))) :=
+@Exists.intro.{1} Nat
+  (fun (n : Nat) =>
+    And (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n)
+      (And (JSP000301.Powerful n)
+        (And
+          (JSP000301.Powerful
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (And (Not (JSP000301.IsSquare n))
+            (Not
+              (JSP000301.IsSquare
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))))))
+  (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+  (@And.intro
+    (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+      (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+    (And (JSP000301.Powerful (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+      (And
+        (JSP000301.Powerful
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (And (Not (JSP000301.IsSquare (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))))
+          (Not
+            (JSP000301.IsSquare
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))))))
+    (@of_decide_eq_true
+      (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+      (Nat.decLt (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+      (@id.{0}
+        (@Eq.{1} Bool
+          (@Decidable.decide
+            (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+              (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+            (Nat.decLt (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+              (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))))
+          Bool.true)
+        (@Eq.refl.{1} Bool Bool.true)))
+    (@And.intro (JSP000301.Powerful (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+      (And
+        (JSP000301.Powerful
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (And (Not (JSP000301.IsSquare (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))))
+          (Not
+            (JSP000301.IsSquare
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))))
+      JSP000301.powerful_12167
+      (@And.intro
+        (JSP000301.Powerful
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (And (Not (JSP000301.IsSquare (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))))
+          (Not
+            (JSP000301.IsSquare
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))))
+        (@id.{0}
+          (JSP000301.Powerful
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+              (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          JSP000301.powerful_12168)
+        (@And.intro (Not (JSP000301.IsSquare (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))))
+          (Not
+            (JSP000301.IsSquare
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+          JSP000301.not_square_12167
+          (@id.{0}
+            (Not
+              (JSP000301.IsSquare
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                  (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+            JSP000301.not_square_12168)))))
+'JSP000301.consecutive_powerful_neither_square' depends on axioms: [propext]
