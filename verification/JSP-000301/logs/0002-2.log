@@ -1,0 +1,63 @@
+AuditBridge.intended_statement_is_false : Not AuditBridge.IntendedClaim
+theorem AuditBridge.intended_statement_is_false : Not AuditBridge.IntendedClaim :=
+fun (h : AuditBridge.IntendedClaim) =>
+  JSP000301.original_claim_is_false
+    fun (n : Nat) (hn : @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n)
+      (hpn : JSP000301.Powerful n)
+      (hpn1 :
+        JSP000301.Powerful
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) =>
+    @Or.casesOn (AuditBridge.StdSquare n)
+      (AuditBridge.StdSquare
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+      (fun
+          (x :
+            Or (AuditBridge.StdSquare n)
+              (AuditBridge.StdSquare
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))) =>
+        Or (JSP000301.IsSquare n)
+          (JSP000301.IsSquare
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+      (h n hn (@Iff.mpr (AuditBridge.StdPowerful n) (JSP000301.Powerful n) (AuditBridge.powerful_bridge n) hpn)
+        (@Iff.mpr
+          (AuditBridge.StdPowerful
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (JSP000301.Powerful
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (AuditBridge.powerful_bridge
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          hpn1))
+      (fun (hs : AuditBridge.StdSquare n) =>
+        @Or.inl (JSP000301.IsSquare n)
+          (JSP000301.IsSquare
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (@Iff.mp (AuditBridge.StdSquare n) (JSP000301.IsSquare n) (AuditBridge.square_bridge n) hs))
+      fun
+        (hs :
+          AuditBridge.StdSquare
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) =>
+      @Or.inr (JSP000301.IsSquare n)
+        (JSP000301.IsSquare
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        (@Iff.mp
+          (AuditBridge.StdSquare
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (JSP000301.IsSquare
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          (AuditBridge.square_bridge
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+          hs)
+'AuditBridge.intended_statement_is_false' depends on axioms: [propext]
