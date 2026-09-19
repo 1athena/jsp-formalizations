@@ -1,0 +1,8 @@
+ℹ [2/3] Replayed JSP000301
+info: JSP000301.lean:253:0: 'JSP000301.consecutive_powerful_neither_square' depends on axioms: [propext]
+info: JSP000301.lean:254:0: 'JSP000301.original_claim_is_false' depends on axioms: [propext]
+ℹ [3/3] Built AuditBridge (258ms)
+info: AuditBridge.lean:63:0: 'AuditBridge.intended_statement_is_false' depends on axioms: [propext]
+info: AuditBridge.lean:64:0: 'AuditBridge.prime_bridge' depends on axioms: [propext]
+info: AuditBridge.lean:65:0: 'AuditBridge.powerful_bridge' depends on axioms: [propext]
+Build completed successfully (3 jobs).
