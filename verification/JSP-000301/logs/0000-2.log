@@ -1,0 +1,79 @@
+JSP000301.original_claim_is_false : Not
+  (∀ (n : Nat),
+    @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n →
+      JSP000301.Powerful n →
+        JSP000301.Powerful
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
+          Or (JSP000301.IsSquare n)
+            (JSP000301.IsSquare
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+theorem JSP000301.original_claim_is_false : Not
+  (∀ (n : Nat),
+    @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n →
+      JSP000301.Powerful n →
+        JSP000301.Powerful
+            (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+              (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
+          Or (JSP000301.IsSquare n)
+            (JSP000301.IsSquare
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))) :=
+fun
+    (h :
+      ∀ (n : Nat),
+        @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n →
+          JSP000301.Powerful n →
+            JSP000301.Powerful
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))) →
+              Or (JSP000301.IsSquare n)
+                (JSP000301.IsSquare
+                  (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat) n
+                    (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))) =>
+  @Or.casesOn (JSP000301.IsSquare (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+    (JSP000301.IsSquare
+      (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+        (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+        (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+    (fun
+        (x :
+          Or (JSP000301.IsSquare (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+            (JSP000301.IsSquare
+              (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))) =>
+      False)
+    (h (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+      (@of_decide_eq_true
+        (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+          (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+        (Nat.decLt (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+          (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+        (@id.{0}
+          (@Eq.{1} Bool
+            (@Decidable.decide
+              (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167))))
+              (Nat.decLt (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+                (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))))
+            Bool.true)
+          (@Eq.refl.{1} Bool Bool.true)))
+      JSP000301.powerful_12167
+      (@id.{0}
+        (JSP000301.Powerful
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+        JSP000301.powerful_12168))
+    (fun (hs : JSP000301.IsSquare (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))) =>
+      JSP000301.not_square_12167 hs)
+    fun
+      (hs :
+        JSP000301.IsSquare
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 12167) (instOfNatNat (nat_lit 12167)))
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) =>
+    JSP000301.not_square_12168 hs
+'JSP000301.original_claim_is_false' depends on axioms: [propext]
