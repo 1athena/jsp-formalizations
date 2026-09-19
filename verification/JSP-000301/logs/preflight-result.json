@@ -1,0 +1,26 @@
+{
+  "ready_for_target_checks": true,
+  "issues": [],
+  "head": "39b85298cffb83fb07423216e741550e90470c09",
+  "git_status": "?? AuditBridge.lean\n?? lake-manifest.json\n?? lakefile.toml",
+  "toolchain_file": "leanprover/lean4:v4.33.0",
+  "file_sha256": {
+    "AuditBridge.lean": "207ae0cb6d2eb2a8f0795fa034fc83db9a62029eeee0a728208e0ad61b016b10",
+    "JSP000301.lean": "d003ef1cc20b9560177050837275faa15b957cb6f7126e851ea21ae8c336dacf",
+    "lake-manifest.json": "3f7ed5bdd996f240b7f3fd5a643176e187330fb8317fe855a1d74c6434b74d2b",
+    "lakefile.lean": null,
+    "lakefile.toml": "3d73c97117bacf343d6ccb46ff16d892c9ba406f90839ea7c0ee76d956ea4d9d",
+    "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
+  },
+  "manual_preconditions": [
+    "isolation and resource limits established",
+    "clean source build and trusted cache provenance recorded",
+    "actual dependency SHAs match fixed evidence",
+    "tool binaries are trusted and match the pinned toolchain",
+    "all untracked inputs and module/source mappings reviewed"
+  ],
+  "checker_compatibility": "not_probed; inspect pinned checker separately",
+  "manifest_sha256": "6ac792d6dfe83f03f7fd19b8d578df9c0e45a9ddd84d13010d6bde19256d3525",
+  "script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+  "exit_code": 0
+}
