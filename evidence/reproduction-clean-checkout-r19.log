@@ -1,0 +1,30 @@
+=== clean checkout reproduction ===
+date: 2026-09-19T08:09:18Z
+repo: https://github.com/1athena/jsp-formalizations
+pinned commit: 39b85298cffb83fb07423216e741550e90470c09
+--- git log -1 ---
+39b85298cffb83fb07423216e741550e90470c09
+JSP Runner
+Sat Sep 19 16:09:00 2026 +0800
+JSP000301: eliminate linter warnings (unnecessarySimpa) in not_square_12167/12168; kernel exit 0, axioms [propext], zero warnings
+--- lean-toolchain ---
+leanprover/lean4:v4.33.0
+--- ls ---
+JSP000301.lean
+README.md
+evidence
+lean-toolchain
+--- lean --version ---
+Lean (version 4.33.0, arm64-apple-darwin20.0.0, Release)
+--- grep sorry/admit (excluding comments) ---
+27:  Trust: no `sorry`, no `admit`, no custom axioms.  Every finite check is
+250:-- axiom audit: must NOT list sorryAx or any custom axiom
+--- lakefile/deps ---
+none (no dependencies)
+--- run: lean JSP000301.lean ---
+'JSP000301.consecutive_powerful_neither_square' depends on axioms: [propext]
+'JSP000301.original_claim_is_false' depends on axioms: [propext]
+real 22.73
+user 37.49
+sys 1.76
+EXIT=0
