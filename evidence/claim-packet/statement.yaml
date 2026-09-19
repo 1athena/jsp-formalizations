@@ -16,6 +16,8 @@ statement:
     (2) JSP000301.original_claim_is_false :
         ~ (forall n : Nat, 0 < n -> Powerful n -> Powerful (n + 1) -> IsSquare n \/ IsSquare (n + 1)).
   natural_language_source: >-
+    Problem-bank link (required by the award-claim form since upstream PR #806):
+    https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0301-0400.md#JSP-000301
     TheJustinSunPrize/awards problem bank, record JSP-000301, file problems/catalog-0301-0400.md
     (status "Solved (disproved)": 12167 = 23^3 and 12168 = 2^3 * 3^2 * 13^2 are consecutive
     powerful numbers and neither is a perfect square; both lie strictly between 110^2 = 12100
