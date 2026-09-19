@@ -179,8 +179,9 @@ theorem not_square_12167 : ¬ IsSquare 12167 := by
   rintro ⟨k, hk⟩
   have hk0 : k ≠ 0 := by
     intro h0
-    have hz : (0 : Nat) = 12167 := by simpa [h0] using hk
-    cases hz
+    subst k
+    change (0 : Nat) = 12167 at hk
+    cases hk
   -- k <= k*k = 12167, so k lies inside the swept range
   have hk_le : k ≤ 12167 := by
     have h1 : k ≤ k * k := Nat.le_mul_of_pos_right k (Nat.pos_of_ne_zero hk0)
@@ -194,8 +195,9 @@ theorem not_square_12168 : ¬ IsSquare 12168 := by
   rintro ⟨k, hk⟩
   have hk0 : k ≠ 0 := by
     intro h0
-    have hz : (0 : Nat) = 12168 := by simpa [h0] using hk
-    cases hz
+    subst k
+    change (0 : Nat) = 12168 at hk
+    cases hk
   have hk_le : k ≤ 12168 := by
     have h1 : k ≤ k * k := Nat.le_mul_of_pos_right k (Nat.pos_of_ne_zero hk0)
     simpa [hk] using h1
