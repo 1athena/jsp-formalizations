@@ -1,0 +1,3 @@
+'JSP000301.consecutive_powerful_neither_square' depends on axioms: [propext]
+'JSP000301.original_claim_is_false' depends on axioms: [propext]
+lean JSP000301.lean  30.45s user 1.09s system 168% cpu 18.699 total
