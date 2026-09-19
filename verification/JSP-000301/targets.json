@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/tmp/lv844/project",
+    "repository": "https://github.com/1athena/jsp-formalizations",
+    "commit": "39b85298cffb83fb07423216e741550e90470c09",
+    "toolchain": "leanprover/lean4:v4.33.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000301",
+      "source": "https://www.erdosproblems.com/365",
+      "requirements": [
+        {
+          "id": "main",
+          "description": "Erdos problem 365 / JSP-000301 asks: if two consecutive positive integers are both powerful, must at least one of them be a perfect square? The catalogued record states the complete answer is a disproof via the witness 12167 = 23^3 and 12168 = 2^3*3^2*13^2. A complete formalization must settle the yes/no question, i.e. prove the negation of the universal claim, over all positive natural numbers, with 'powerful' meaning every prime divisor p satisfies p^2 | n and 'perfect square' meaning n = k^2 for a natural k.",
+          "targets": [
+            "main",
+            "witness",
+            "bridge"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "main",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.original_claim_is_false"
+    },
+    {
+      "id": "witness",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.consecutive_powerful_neither_square"
+    },
+    {
+      "id": "bridge",
+      "problem": "JSP-000301",
+      "role": "bridge",
+      "module": "AuditBridge",
+      "source": "AuditBridge.lean",
+      "declaration": "AuditBridge.intended_statement_is_false"
+    }
+  ]
+}
