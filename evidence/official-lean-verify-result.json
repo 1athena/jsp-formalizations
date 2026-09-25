@@ -1,0 +1,275 @@
+{
+  "scope": "target_checks_only",
+  "semantic_verdict": "not_determined",
+  "preflight": {
+    "ready_for_target_checks": true,
+    "issues": [],
+    "head": "39b85298cffb83fb07423216e741550e90470c09",
+    "git_status": "?? .lake/config/0/lakefile.olean\n?? .lake/config/0/lakefile.olean.trace\n?? lake-manifest.json\n?? lakefile.lean",
+    "toolchain_file": "leanprover/lean4:v4.33.0",
+    "file_sha256": {
+      "JSP000301.lean": "d003ef1cc20b9560177050837275faa15b957cb6f7126e851ea21ae8c336dacf",
+      "lake-manifest.json": "1afb33d57f2ca692faee9317d7d352e2df036ea4a99b261920d4923059ae8694",
+      "lakefile.lean": "1b0fab9df8a0b10af062b9322013de4b99e5435b7fb41f6ec8152f2e5635f6f6",
+      "lakefile.toml": null,
+      "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
+    },
+    "manual_preconditions": [
+      "isolation and resource limits established",
+      "clean source build and trusted cache provenance recorded",
+      "actual dependency SHAs match fixed evidence",
+      "tool binaries are trusted and match the pinned toolchain",
+      "all untracked inputs and module/source mappings reviewed"
+    ],
+    "checker_compatibility": "not_probed; inspect pinned checker separately"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+        "--version"
+      ],
+      "cwd": "/private/tmp/lv36/proj2",
+      "log": "/private/tmp/lv36/audit2/version-0.log",
+      "exit_code": 0,
+      "status": "ok",
+      "seconds": 0.041,
+      "log_sha256": "cf05d224c4796fdb12e8d80b6c4b887580d7774005bb08b76c3c8298da770aab"
+    },
+    {
+      "argv": [
+        "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+        "env",
+        "lean",
+        "--version"
+      ],
+      "cwd": "/private/tmp/lv36/proj2",
+      "log": "/private/tmp/lv36/audit2/version-1.log",
+      "exit_code": 0,
+      "status": "ok",
+      "seconds": 0.618,
+      "log_sha256": "d8a0f4d4eed9f4b1014a79e8499f6091c9c6ac135ba908caf7c1b75010941e0e"
+    },
+    {
+      "argv": [
+        "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+        "build",
+        "+JSP000301"
+      ],
+      "cwd": "/private/tmp/lv36/proj2",
+      "log": "/private/tmp/lv36/audit2/0000-0.log",
+      "exit_code": 0,
+      "status": "ok",
+      "seconds": 19.272,
+      "log_sha256": "0c98e4eea417e4fa5a1dce929563b6c53d35c893c641ae38f47c1d5a2a9a9eb3"
+    },
+    {
+      "argv": [
+        "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+        "env",
+        "lean",
+        "/private/tmp/lv36/proj2/JSP000301.lean"
+      ],
+      "cwd": "/private/tmp/lv36/proj2",
+      "log": "/private/tmp/lv36/audit2/0000-1.log",
+      "exit_code": 0,
+      "status": "ok",
+      "seconds": 18.824,
+      "log_sha256": "afc67a1851417111bc4a94dbe109458f8fc3bd121b9dbd7c6a9e051518ff529a"
+    },
+    {
+      "argv": [
+        "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+        "env",
+        "lean",
+        "/private/tmp/lv36/audit2/Audit0000.lean"
+      ],
+      "cwd": "/private/tmp/lv36/proj2",
+      "log": "/private/tmp/lv36/audit2/0000-2.log",
+      "exit_code": 0,
+      "status": "ok",
+      "seconds": 0.847,
+      "log_sha256": "56c7c9c7b3a6aeb0bed0a1eeb25455cb25df21a9a4dd30b7bfb438d32794c174"
+    },
+    {
+      "argv": [
+        "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+        "build",
+        "+JSP000301"
+      ],
+      "cwd": "/private/tmp/lv36/proj2",
+      "log": "/private/tmp/lv36/audit2/0001-0.log",
+      "exit_code": 0,
+      "status": "ok",
+      "seconds": 0.57,
+      "log_sha256": "f7033f9717cd369772b94132a8f11a1ea286124172999c89096a20d9e29b1b9d"
+    },
+    {
+      "argv": [
+        "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+        "env",
+        "lean",
+        "/private/tmp/lv36/proj2/JSP000301.lean"
+      ],
+      "cwd": "/private/tmp/lv36/proj2",
+      "log": "/private/tmp/lv36/audit2/0001-1.log",
+      "exit_code": 0,
+      "status": "ok",
+      "seconds": 18.418,
+      "log_sha256": "afc67a1851417111bc4a94dbe109458f8fc3bd121b9dbd7c6a9e051518ff529a"
+    },
+    {
+      "argv": [
+        "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+        "env",
+        "lean",
+        "/private/tmp/lv36/audit2/Audit0001.lean"
+      ],
+      "cwd": "/private/tmp/lv36/proj2",
+      "log": "/private/tmp/lv36/audit2/0001-2.log",
+      "exit_code": 0,
+      "status": "ok",
+      "seconds": 0.791,
+      "log_sha256": "391f18a9cb3f99496bac67d490e0fb6ed4ea1abdf0ef6a5f78e50adb5d528fc2"
+    }
+  ],
+  "targets": [
+    {
+      "id": "main",
+      "declaration": "JSP000301.consecutive_powerful_neither_square",
+      "audit_file": "/private/tmp/lv36/audit2/Audit0000.lean",
+      "audit_sha256": "6948fbaf333452f0e9b13c58cb0f92d47bec123bc655e3e1d8f7084431463daf",
+      "status": "standard_axioms_only",
+      "axioms": [
+        "propext"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+            "build",
+            "+JSP000301"
+          ],
+          "cwd": "/private/tmp/lv36/proj2",
+          "log": "/private/tmp/lv36/audit2/0000-0.log",
+          "exit_code": 0,
+          "status": "ok",
+          "seconds": 19.272,
+          "log_sha256": "0c98e4eea417e4fa5a1dce929563b6c53d35c893c641ae38f47c1d5a2a9a9eb3"
+        },
+        {
+          "argv": [
+            "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+            "env",
+            "lean",
+            "/private/tmp/lv36/proj2/JSP000301.lean"
+          ],
+          "cwd": "/private/tmp/lv36/proj2",
+          "log": "/private/tmp/lv36/audit2/0000-1.log",
+          "exit_code": 0,
+          "status": "ok",
+          "seconds": 18.824,
+          "log_sha256": "afc67a1851417111bc4a94dbe109458f8fc3bd121b9dbd7c6a9e051518ff529a"
+        },
+        {
+          "argv": [
+            "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+            "env",
+            "lean",
+            "/private/tmp/lv36/audit2/Audit0000.lean"
+          ],
+          "cwd": "/private/tmp/lv36/proj2",
+          "log": "/private/tmp/lv36/audit2/0000-2.log",
+          "exit_code": 0,
+          "status": "ok",
+          "seconds": 0.847,
+          "log_sha256": "56c7c9c7b3a6aeb0bed0a1eeb25455cb25df21a9a4dd30b7bfb438d32794c174"
+        }
+      ]
+    },
+    {
+      "id": "bridge",
+      "declaration": "JSP000301.original_claim_is_false",
+      "audit_file": "/private/tmp/lv36/audit2/Audit0001.lean",
+      "audit_sha256": "4c7bb311a4def3fc6ecf0ff15e59112fa40c1be618ff44b995a601429d5a2d86",
+      "status": "standard_axioms_only",
+      "axioms": [
+        "propext"
+      ],
+      "commands": [
+        {
+          "argv": [
+            "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+            "build",
+            "+JSP000301"
+          ],
+          "cwd": "/private/tmp/lv36/proj2",
+          "log": "/private/tmp/lv36/audit2/0001-0.log",
+          "exit_code": 0,
+          "status": "ok",
+          "seconds": 0.57,
+          "log_sha256": "f7033f9717cd369772b94132a8f11a1ea286124172999c89096a20d9e29b1b9d"
+        },
+        {
+          "argv": [
+            "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+            "env",
+            "lean",
+            "/private/tmp/lv36/proj2/JSP000301.lean"
+          ],
+          "cwd": "/private/tmp/lv36/proj2",
+          "log": "/private/tmp/lv36/audit2/0001-1.log",
+          "exit_code": 0,
+          "status": "ok",
+          "seconds": 18.418,
+          "log_sha256": "afc67a1851417111bc4a94dbe109458f8fc3bd121b9dbd7c6a9e051518ff529a"
+        },
+        {
+          "argv": [
+            "/Users/liulili/suibian/jsp/lean/conda/bin/lake",
+            "env",
+            "lean",
+            "/private/tmp/lv36/audit2/Audit0001.lean"
+          ],
+          "cwd": "/private/tmp/lv36/proj2",
+          "log": "/private/tmp/lv36/audit2/0001-2.log",
+          "exit_code": 0,
+          "status": "ok",
+          "seconds": 0.791,
+          "log_sha256": "391f18a9cb3f99496bac67d490e0fb6ed4ea1abdf0ef6a5f78e50adb5d528fc2"
+        }
+      ]
+    }
+  ],
+  "mechanical_status": "standard_axioms_only",
+  "tool_versions": [
+    "Lake version 5.0.0-src (Lean version 4.33.0)\n",
+    "Lean (version 4.33.0, arm64-apple-darwin20.0.0, Release)\n"
+  ],
+  "after": {
+    "ready_for_target_checks": true,
+    "issues": [],
+    "head": "39b85298cffb83fb07423216e741550e90470c09",
+    "git_status": "?? .lake/build/ir/JSP000301.c\n?? .lake/build/ir/JSP000301.c.hash\n?? .lake/build/ir/JSP000301.setup.json\n?? .lake/build/lib/lean/JSP000301.ilean\n?? .lake/build/lib/lean/JSP000301.ilean.hash\n?? .lake/build/lib/lean/JSP000301.olean\n?? .lake/build/lib/lean/JSP000301.olean.hash\n?? .lake/build/lib/lean/JSP000301.trace\n?? .lake/config/0/lakefile.olean\n?? .lake/config/0/lakefile.olean.trace\n?? lake-manifest.json\n?? lakefile.lean",
+    "toolchain_file": "leanprover/lean4:v4.33.0",
+    "file_sha256": {
+      "JSP000301.lean": "d003ef1cc20b9560177050837275faa15b957cb6f7126e851ea21ae8c336dacf",
+      "lake-manifest.json": "1afb33d57f2ca692faee9317d7d352e2df036ea4a99b261920d4923059ae8694",
+      "lakefile.lean": "1b0fab9df8a0b10af062b9322013de4b99e5435b7fb41f6ec8152f2e5635f6f6",
+      "lakefile.toml": null,
+      "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
+    },
+    "manual_preconditions": [
+      "isolation and resource limits established",
+      "clean source build and trusted cache provenance recorded",
+      "actual dependency SHAs match fixed evidence",
+      "tool binaries are trusted and match the pinned toolchain",
+      "all untracked inputs and module/source mappings reviewed"
+    ],
+    "checker_compatibility": "not_probed; inspect pinned checker separately"
+  },
+  "inputs_stable": true,
+  "manifest_sha256": "36c39d06ddad5fa8a5b018346e8cb940743d39041fc0830c615939f30d9fb6b8",
+  "script_sha256": "5db45dddcb4d588bc27e7c7161fbca5cedaa3e73e1c40843d21f5a214323cd07",
+  "exit_code": 0
+}
