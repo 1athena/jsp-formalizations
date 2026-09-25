@@ -1,0 +1,42 @@
+# sources.yaml — authorship / provenance record for this repository.
+#
+# Referenced by The Justin Sun Prize attribution review (docs/attribution.md):
+# maintainers match the claiming GitHub account to "the formalization author
+# identified in source records such as `sources.yaml` or the original
+# repository's authorship credits".
+
+repository:
+  url: https://github.com/1athena/jsp-formalizations
+  owner_account: 1athena
+  kind: standalone dedicated Lean formalization repository
+  is_fork: false
+  forked_from: null
+
+contributions:
+  - problem_id: JSP-000301
+    erdos_problem: 365
+    role: Lean formalization author
+    github_account: 1athena
+    account_is_repository_owner: true
+    proxy_claim: false
+    pinned_commit: 39b85298cffb83fb07423216e741550e90470c09
+    entry_file: JSP000301.lean
+    theorems:
+      - JSP000301.original_claim_is_false
+      - JSP000301.consecutive_powerful_neither_square
+    mathematical_solution:
+      author: Solomon W. Golomb
+      reference: '"Powerful numbers", Amer. Math. Monthly 77(8) (1970), 848-852'
+      doi: 10.2307/2317020
+      claimed_by: not claimed (historical solution, credited to Golomb)
+    statement_fidelity: >
+      The formal target is the exact negation of the catalogued yes/no question.
+      No constraint, antecedent or case of the catalogued record is dropped.
+    third_party_code: none
+    reused_components: none
+    assistance: >
+      Prepared with AI assistance (WorkBuddy / LLM) under the direction of the
+      account owner 1athena, who authored, verified and published the content.
+    toolchain: leanprover/lean4:v4.33.0
+    axioms: [propext]
+    nonstandard_reduction: none  # no native_decide / implemented_by / extern / unsafe
