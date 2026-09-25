@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "project": {
+    "root": "/private/tmp/lv36/proj2",
+    "repository": "https://github.com/1athena/jsp-formalizations",
+    "commit": "39b85298cffb83fb07423216e741550e90470c09",
+    "toolchain": "leanprover/lean4:v4.33.0"
+  },
+  "problems": [
+    {
+      "id": "JSP-000301",
+      "source": "https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0301-0400.md#JSP-000301",
+      "requirements": [
+        {
+          "id": "main",
+          "description": "If two consecutive positive integers are powerful, must at least one be a perfect square? Official record: Solved (disproved) by 12167=23^3 and 12168=2^3*3^2*13^2, neither a perfect square. Requirement: exhibit the counterexample and prove the original yes/no claim is false, with standard (non-computational) definitions of powerful / perfect square / prime.",
+          "targets": [
+            "main",
+            "bridge"
+          ],
+          "coverage": "pending"
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "id": "main",
+      "problem": "JSP-000301",
+      "role": "theorem",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.consecutive_powerful_neither_square"
+    },
+    {
+      "id": "bridge",
+      "problem": "JSP-000301",
+      "role": "bridge",
+      "module": "JSP000301",
+      "source": "JSP000301.lean",
+      "declaration": "JSP000301.original_claim_is_false"
+    }
+  ]
+}
