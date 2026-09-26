@@ -1,0 +1,14 @@
+RUN_UTC=2026-09-26T05:04:30Z
+Lean (version 4.33.0, arm64-apple-darwin20.0.0, Release)
+=== kernel check ===
+'JSP000301.consecutive_powerful_neither_square' depends on axioms: [propext]
+'JSP000301.original_claim_is_false' depends on axioms: [propext]
+exit=0
+=== content-hash ===
+d003ef1cc20b9560177050837275faa15b957cb6f7126e851ea21ae8c336dacf  JSP000301.lean
+=== pinned commit ===
+commit=39b85298cffb83fb07423216e741550e90470c09
+committer_date=2026-09-19 16:09:00 +0800
+subject=JSP000301: eliminate linter warnings (unnecessarySimpa) in not_square_12167/12168; kernel exit 0, axioms [propext], zero warnings
+=== git status ===
+(clean if empty above)
